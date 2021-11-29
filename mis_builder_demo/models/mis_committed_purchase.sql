@@ -22,7 +22,7 @@ CREATE OR REPLACE VIEW mis_committed_purchase AS (
         'uninvoiced purchase' AS line_type,
                 pol.company_id AS company_id,
         pol.name AS name,
-        po.date_planned::date as date,
+        pol.date_planned::date as date,
         pol.account_analytic_id as analytic_account_id,
         '' as account_internal_type,
         NULL as full_reconcile_id,
