@@ -353,6 +353,8 @@ class AccountingExpressionProcessor(object):
                 lazy=False,
             )
             for acc in accs:
+                if acc["company_id"][0] not in company_rates.keys():
+                    continue
                 rate, dp = company_rates[acc["company_id"][0]]
                 debit = acc["debit"] or 0.0
                 credit = acc["credit"] or 0.0
