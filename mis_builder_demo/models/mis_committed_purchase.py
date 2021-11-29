@@ -23,6 +23,8 @@ class MisCommittedPurchase(models.Model):
     credit = fields.Float()
     debit = fields.Float()
     date = fields.Date()
+    account_internal_type = fields.Char()
+    full_reconcile_id = fields.Integer()
 
     # resource can be purchase.order.line or account.move.line
     res_id = fields.Integer(string="Resource ID")
